@@ -10,3 +10,5 @@ This will include 10.[0-255].20.1
 
 
 Great for use in access-lists
+
+If you only need the compiled application, it is contained within wc.exe
