@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.646,=C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.979,C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\WC\main.pas=C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.290,C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\WC\wc.dproj=C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.979,C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\WC\main.dfm=C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.020,=C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.710,=C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.478,=C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.534,=C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.979,C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\WC\main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.290,C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\WC\wc.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.646,=C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.979,C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\jorlan\OneDrive - MarinIT Cloud\RAD\WC\main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.020,=C:\Users\jorlan\OneDrive - MarinIT Cloud\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>
