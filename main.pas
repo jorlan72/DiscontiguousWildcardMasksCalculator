@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, System.RegularExpressions,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.ComCtrls;
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls;
 
 type
   TForm1 = class(TForm)
@@ -15,8 +15,6 @@ type
     Button1: TButton;
     Button2: TButton;
     Image1: TImage;
-    Panel1: TPanel;
-    StatusBar1: TStatusBar;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
@@ -139,7 +137,6 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
- form1.Memo.Clear;
  stoppressed := false;
  ExpandWildcardIP(edit1.Text, edit2.text, Memo);
 end;

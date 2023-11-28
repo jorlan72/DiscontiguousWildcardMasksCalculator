@@ -12,7 +12,7 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.Title := 'Wildcard Mask Checker';
-  TStyleManager.TrySetStyle('Wedgewood Light');
+  TStyleManager.TrySetStyle('Windows10 SlateGray');
   Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

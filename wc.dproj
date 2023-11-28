@@ -70,7 +70,7 @@
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>wc</SanitizedProjectName>
-        <Custom_Styles>&quot;Wedgewood Light|VCLSTYLE|$(BDSCOMMONDIR)\Styles\WedgewoodLight.vsf&quot;</Custom_Styles>
+        <Custom_Styles>&quot;Windows10 SlateGray|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows10SlateGray.vsf&quot;</Custom_Styles>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>DBXSqliteDriver;RESTComponents;bindcompdbx;IcsVclD104Run;DBXInterBaseDriver;vcl;FlexCel_Pdf;vclactnband;FMX_FlexCel_Core;vclFireDAC;indy10sbridge270;bindcompvclsmp;tethering;svnui;bindcompvclwinx;dsnapcon;FireDACADSDriver;sbridge270;FireDACMSAccDriver;fmxFireDAC;IcsFmxD104Run;vclimg;FireDAC;FlexCel_XlsAdapter;vcltouch;vcldb;bindcompfmx;svn;SKIA_FlexCel_Core;FireDACSqliteDriver;FireDACPgDriver;FlexCel_Report;inetdb;IndySystem280;soaprtl;DbxCommonDriver;FlexCel_Core;IndyProtocols280;fmx;FireDACIBDriver;fmxdae;xmlrtl;soapmidas;vcledge;fmxobj;vclwinx;VCL_FlexCel_Components;rtl;DbxClientDriver;IndyCore270;CustomIPTransport;vcldsnap;dbexpress;IndyCore280;vclx;bindcomp;appanalytics;dsnap;FireDACCommon;bindcompvcl;RESTBackendComponents;FMX_FlexCel_Components;VCLRESTComponents;soapserver;dbxcds;VclSmp;VCL_FlexCel_Core;adortl;FlexCel_Render;vclie;IcsCommonD104Run;bindengine;DBXMySQLDriver;CloudService;dsnapxml;FireDACMySQLDriver;dbrtl;inetdbxpress;FMXAppWizard;FireDACCommonODBC;FireDACCommonDriver;inet;fmxase;$(DCC_UsePackage)</DCC_UsePackage>
@@ -122,11 +122,11 @@
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_AutoIncVersion>true</VerInfo_AutoIncVersion>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=CodeRed;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.7;InternalName=WC;LegalCopyright=Jorgen Lanesskog;LegalTrademarks=Jorgen Lanesskog;OriginalFilename=wc.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=CodeRed 2023 - Jorgen Lanesskog</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=CodeRed;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.3;InternalName=WC;LegalCopyright=Jorgen Lanesskog;LegalTrademarks=Jorgen Lanesskog;OriginalFilename=wc.exe;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=CodeRed 2023 - Jorgen Lanesskog</VerInfo_Keys>
         <Icon_MainIcon>Kajdax-The-Lost-Props-Jason-Mask.ico</Icon_MainIcon>
         <UWP_DelphiLogo44>Kajdax-The-Lost-Props-Jason-Mask.48.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>Kajdax-The-Lost-Props-Jason-Mask.256.png</UWP_DelphiLogo150>
-        <VerInfo_Build>7</VerInfo_Build>
+        <VerInfo_Build>3</VerInfo_Build>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
