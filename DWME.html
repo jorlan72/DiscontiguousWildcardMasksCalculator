@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Discontiguous Wildcard Masks Calculator</title>
+<style>
+body { font-family: "Segoe UI", Arial, sans-serif; background: #f5f6fa; padding: 40px; color: #2f3640; }
+.container { max-width: 800px; margin: auto; background: #fff; border-radius: 8px; padding: 25px 30px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+input, textarea { width: 100%; padding: 10px; margin: 5px 0 15px; border: 1px solid #ccc; border-radius: 6px; font-family: monospace; box-sizing: border-box; }
+textarea { height: 220px; resize: vertical; }
+button { padding: 10px 18px; border: none; border-radius: 6px; color: #fff; font-size: 15px; margin-right: 10px; cursor: pointer; }
+#startBtn { background: #4cd137; }
+#startBtn:hover { background: #44bd32; }
+#stopBtn { background: #e84118; }
+#stopBtn:hover { background: #c23616; }
+#status { font-size: 14px; color: #555; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Discontiguous Wildcard Masks Calculator</h2>
+  <label>IP Address</label>
+  <input id="ipInput" placeholder="e.g. 10.0.20.1">
+  <label>Wildcard Mask</label>
+  <input id="maskInput" placeholder="e.g. 0.255.0.0">
+  <div>
+    <button id="startBtn" onclick="startCalc()">Expand</button>
+    <button id="stopBtn" onclick="stopCalc()">Stop</button>
+  </div>
+  <div id="status"></div>
+  <label>Result</label>
+  <textarea id="output" readonly></textarea>
+</div>
+
+<script>
+let stopPressed = false;
+
+function isValidIP(ip) {
+  const parts = ip.trim().split('.');
+  if (parts.length !== 4) return false;
+  return parts.every(p => /^\d+$/.test(p) && +p >= 0 && +p <= 255);
+}
+
+function strToIP(ip) {
+  return ip.split('.').map(n => parseInt(n, 10));
+}
+
+function ipToStr(arr) {
+  return arr.join('.');
+}
+
+// Generate all IPs matching a base and wildcard
+async function expandWildcardIP(ipStr, maskStr) {
+  const output = document.getElementById('output');
+  output.value = '';
+  if (!isValidIP(ipStr) || !isValidIP(maskStr)) {
+    document.getElementById('status').innerText = 'Invalid IP address or wildcard mask.';
+    return;
+  }
+
+  const ip = strToIP(ipStr);
+  const mask = strToIP(maskStr);
+
+  document.getElementById('status').innerText = 'Working...';
+
+  const results = [];
+
+  async function recurse(octet, current) {
+    if (stopPressed) return;
+    if (octet === 4) {
+      results.push(ipToStr(current));
+      if (results.length % 256 === 0) await new Promise(r => setTimeout(r, 0)); // keep UI responsive
+      return;
+    }
+
+    // For each bit where mask bit = 1, it can vary
+    const wildcard = mask[octet];
+    const base = ip[octet];
+    const options = [];
+
+    for (let v = 0; v < 256; v++) {
+      if ((v & ~wildcard) === (base & ~wildcard)) options.push(v);
+    }
+
+    for (const val of options) {
+      current[octet] = val;
+      await recurse(octet + 1, current);
+      if (stopPressed) return;
+    }
+  }
+
+  await recurse(0, [0,0,0,0]);
+
+  if (stopPressed) {
+    output.value += '\nAborted...';
+    document.getElementById('status').innerText = 'Stopped by user.';
+    stopPressed = false;
+    return;
+  }
+
+  output.value = results.join('\n');
+  document.getElementById('status').innerText = `Done. ${results.length} addresses found.`;
+}
+
+function startCalc() {
+  stopPressed = false;
+  document.getElementById('status').innerText = '';
+  expandWildcardIP(
+    document.getElementById('ipInput').value,
+    document.getElementById('maskInput').value
+  );
+}
+
+function stopCalc() {
+  stopPressed = true;
+}
+</script>
+</body>
+</html>
